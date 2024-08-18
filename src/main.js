@@ -9,8 +9,12 @@ vueInit()
 dotenv.config()
 loadCommands()
 const client = new Client({
-	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMessageReactions],
-	partials: [Partials.Message, Partials.Channel, Partials.Reaction],
+	intents: [GatewayIntentBits.Guilds,
+			   GatewayIntentBits.GuildMessages, 
+			   GatewayIntentBits.GuildMessageReactions],
+	partials: [Partials.Message,
+			    Partials.Channel,
+				Partials.Reaction],
 });
 
 const appStore = useAppStore()
